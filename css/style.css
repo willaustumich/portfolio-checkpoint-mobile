@@ -9,6 +9,9 @@ body{
     margin: 10px;
     line-height: 1.25;
     font-family: 'Times New Roman', Times, serif;
+    background: url("../images/elena-joland-uKSdkD_WOxk-unsplash.jpg");
+    background-color: #cccccc;
+    padding-bottom: 50px;
 }
 
 nav li{
@@ -17,6 +20,11 @@ nav li{
     padding: 10px;
     margin-right: 2%;
     text-decoration: none;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
 }
 
 nav a{
@@ -28,8 +36,15 @@ nav a{
     text-transform: uppercase;
 }
 
+
 h1, h2{
     font-size: 150%;
+    padding: 50px;
+    margin: auto;
+}
+
+.container{
+    display: grid;
 }
 
 img{
@@ -40,11 +55,66 @@ img{
     border-radius: 100%;
     padding: 10px;
     margin: 5px;
+    animation-name: example;
+    animation-duration: 4s;
+    position: relative;
+
 }
+
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
 
 img:nth-child(4n):hover{
     border-radius: 0px;
     border-color: pink;
     /* I used 4th to make up for having an h2
     For me, every third image is the fourth child */
+}
+
+legend{
+    text-align: center;
+    font-size: 2.5em;
+    padding: 50px;
+    font-family: 'Josefin Sans';
+    font-weight: 500;
+    font-style: italic;
+}
+
+fieldset label{
+    display: inline-block;
+    margin-right: 10px;
+    padding-top: 10px;
+    /* width: 15%; */
+    font-family: 'Josefin Sans';
+}
+
+input[type=text], input[type=email], input[type=tel], textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans';
+  }
+
+  input[type=submit]{
+    display: block;
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    margin: auto;
+    cursor: pointer;
+  }
+
+  @media (prefers-reduced-motion) {
+    .animation {
+      animation-name: dissolve;
+    }
 }
